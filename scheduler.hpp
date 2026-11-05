@@ -39,7 +39,7 @@ struct Constraints {
 
 Constraints extract_constraints(const json& data);
 
-struct Schedule {
+struct Timetable {
     using Subject = std::string;
     using Teacher = std::string;
     using Class = std::string;
@@ -50,4 +50,4 @@ struct Schedule {
 };
 
 
-Schedule build_schedule(const Constraints& constraints);
+Timetable build_timetable(const Constraints& constraints);

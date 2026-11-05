@@ -70,7 +70,7 @@ Constraints extract_constraints(const json& data) {
 }
 
 
-CSV Schedule::to_csv() const {
+CSV Timetable::to_csv() const {
     CSV csv;
     csv.resize( 5 + 1, 10 * classes.size());
     int y = 0;
@@ -90,11 +90,15 @@ namespace sat = operations_research::sat;
 
 
 // This is the biggest nonsense I've ever written but it works for now
-Schedule build_schedule(const Constraints& constraints) {
-    int max_periods = 7;
+Timetable build_timetable(const Constraints& constraints) {
+    int max_periods = 10;
     int max_days = 5;
 
     using SlotTable = std::vector<std::vector<sat::BoolVar>>;
+    struct Lesson {
+        SlotTable slot_table;
+    };
+
 
     sat::CpModelBuilder cp_model;
     std::vector<std::vector<SlotTable>> lesson_timeslot_tables;
@@ -197,17 +201,17 @@ Schedule build_schedule(const Constraints& constraints) {
         std::cout << "Feasible" << "\n";
     } else if (response.status() == sat::CpSolverStatus::INFEASIBLE) {
         std::cout << "Infeasible" << "\n";
-        return Schedule();
+        return Timetable();
     } else {
         std::cout << "Other" << "\n";
-        return Schedule();
+        return Timetable();
     }
 
 
-    Schedule schedule;
+    Timetable timetable;
     int class_id = 0;
     for (auto& school_class : constraints.classes) {
-        schedule.classes.emplace(school_class.name, std::vector<std::vector<std::string>>(max_days, std::vector<std::string>(max_periods, "")));
+        timetable.classes.emplace(school_class.name, std::vector<std::vector<std::string>>(max_days, std::vector<std::string>(max_periods, "")));
         int subject_id = 0;
         for (auto& subject : school_class.course) {
             for (int i = 0; i < subject.second; i++) {
@@ -215,7 +219,7 @@ Schedule build_schedule(const Constraints& constraints) {
                     bool should_break = false;
                     for (int period_index = 0; period_index < max_periods; period_index++) {
                         if (sat::SolutionBooleanValue(response, lesson_timeslot_tables.at(class_id).at(subject_id).at(day_index).at(period_index))) {
-                            schedule.classes.at(school_class.name).at(day_index).at(period_index) = subject.first;
+                            timetable.classes.at(school_class.name).at(day_index).at(period_index) = subject.first;
                             should_break = true;
                             break;
                         }
@@ -229,5 +233,5 @@ Schedule build_schedule(const Constraints& constraints) {
         }
         class_id++;
     }
-    return schedule;
+    return timetable;
 }

@@ -7,7 +7,7 @@ int main() {
     assert(source.is_open());
     json data = json::parse(source);
     auto constraints = extract_constraints(data);
-    auto schedule = build_schedule(constraints);
+    auto schedule = build_timetable(constraints);
     std::ofstream output("result.csv");
     output << schedule.to_csv().dump();
     std::cout << schedule.to_csv().dump();
