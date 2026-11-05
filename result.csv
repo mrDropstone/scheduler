@@ -1,0 +1,100 @@
+Class C00,pe,music,math,geography,art
+,math,pe,english,computing,math
+,geography,pe,english,english,history
+,art,art,computing,history,french
+,science,music,history,geography,science
+,music,,science,french,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Class C01,science,computing,pe,math,art
+,french,french,history,computing,art
+,english,music,history,pe,geography
+,english,music,english,science,science
+,geography,geography,math,pe,math
+,,history,music,art,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Class C02,geography,pe,music,science,geography
+,geography,art,history,math,pe
+,computing,history,science,french,art
+,music,science,history,art,pe
+,math,computing,french,music,english
+,,english,english,,math
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Class C03,music,english,geography,computing,english
+,music,math,art,science,french
+,pe,science,french,art,computing
+,math,history,geography,music,history
+,pe,english,pe,art,science
+,geography,,,history,math
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Class C04,music,art,science,french,english
+,pe,history,math,geography,geography
+,art,science,music,computing,music
+,geography,math,science,computing,english
+,french,math,english,pe,history
+,,,art,history,pe
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Class C05,geography,science,art,pe,math
+,geography,music,science,pe,history
+,history,pe,english,science,french
+,art,computing,art,computing,music
+,french,music,geography,math,history
+,math,english,,english,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Class C06,french,geography,art,english,computing
+,music,science,computing,history,history
+,pe,french,math,geography,pe
+,english,english,math,pe,math
+,geography,art,science,history,art
+,,science,music,,music
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Class C07,history,french,computing,english,music
+,history,history,math,math,pe
+,geography,french,computing,english,english
+,science,art,music,math,pe
+,art,pe,science,music,art
+,,geography,science,geography,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Class C08,art,science,pe,math,science
+,english,french,music,art,english
+,math,music,history,math,geography
+,french,history,geography,english,computing
+,music,history,pe,art,computing
+,,,geography,pe,science
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Class C09,pe,history,science,art,science
+,art,science,music,history,english
+,computing,computing,art,french,music
+,music,english,math,geography,math
+,english,math,history,geography,geography
+,,pe,,pe,french
+,,,,,
+,,,,,
+,,,,,
+,,,,,

@@ -1,0 +1,506 @@
+{
+  "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri"
+  ],
+  "periods_per_day": 6,
+  "teachers": [
+    "MAT_0",
+    "MAT_1",
+    "ENG_0",
+    "ENG_1",
+    "SCI_0",
+    "SCI_1",
+    "HIS_0",
+    "HIS_1",
+    "GEO_0",
+    "GEO_1",
+    "PE_0",
+    "PE_1",
+    "ART_0",
+    "ART_1",
+    "MUS_0",
+    "MUS_1",
+    "COM_0",
+    "COM_1",
+    "FRE_0",
+    "FRE_1"
+  ],
+  "subjects": [
+    "math",
+    "english",
+    "science",
+    "history",
+    "geography",
+    "pe",
+    "art",
+    "music",
+    "computing",
+    "french"
+  ],
+  "classes": {
+    "C00": {
+      "teachers": {
+        "math": [
+          "MAT_0"
+        ],
+        "english": [
+          "ENG_0"
+        ],
+        "science": [
+          "SCI_0"
+        ],
+        "history": [
+          "HIS_0"
+        ],
+        "geography": [
+          "GEO_0"
+        ],
+        "pe": [
+          "PE_0"
+        ],
+        "art": [
+          "ART_0"
+        ],
+        "music": [
+          "MUS_0"
+        ],
+        "computing": [
+          "COM_0"
+        ],
+        "french": [
+          "FRE_0"
+        ]
+      },
+      "course": {
+        "math": 3,
+        "english": 3,
+        "science": 3,
+        "history": 3,
+        "geography": 3,
+        "pe": 3,
+        "art": 3,
+        "music": 3,
+        "computing": 2,
+        "french": 2
+      }
+    },
+    "C01": {
+      "teachers": {
+        "math": [
+          "MAT_1"
+        ],
+        "english": [
+          "ENG_1"
+        ],
+        "science": [
+          "SCI_1"
+        ],
+        "history": [
+          "HIS_1"
+        ],
+        "geography": [
+          "GEO_1"
+        ],
+        "pe": [
+          "PE_1"
+        ],
+        "art": [
+          "ART_1"
+        ],
+        "music": [
+          "MUS_1"
+        ],
+        "computing": [
+          "COM_1"
+        ],
+        "french": [
+          "FRE_1"
+        ]
+      },
+      "course": {
+        "math": 3,
+        "english": 3,
+        "science": 3,
+        "history": 3,
+        "geography": 3,
+        "pe": 3,
+        "art": 3,
+        "music": 3,
+        "computing": 2,
+        "french": 2
+      }
+    },
+    "C02": {
+      "teachers": {
+        "math": [
+          "MAT_0"
+        ],
+        "english": [
+          "ENG_0"
+        ],
+        "science": [
+          "SCI_0"
+        ],
+        "history": [
+          "HIS_0"
+        ],
+        "geography": [
+          "GEO_0"
+        ],
+        "pe": [
+          "PE_0"
+        ],
+        "art": [
+          "ART_0"
+        ],
+        "music": [
+          "MUS_0"
+        ],
+        "computing": [
+          "COM_0"
+        ],
+        "french": [
+          "FRE_0"
+        ]
+      },
+      "course": {
+        "math": 3,
+        "english": 3,
+        "science": 3,
+        "history": 3,
+        "geography": 3,
+        "pe": 3,
+        "art": 3,
+        "music": 3,
+        "computing": 2,
+        "french": 2
+      }
+    },
+    "C03": {
+      "teachers": {
+        "math": [
+          "MAT_1"
+        ],
+        "english": [
+          "ENG_1"
+        ],
+        "science": [
+          "SCI_1"
+        ],
+        "history": [
+          "HIS_1"
+        ],
+        "geography": [
+          "GEO_1"
+        ],
+        "pe": [
+          "PE_1"
+        ],
+        "art": [
+          "ART_1"
+        ],
+        "music": [
+          "MUS_1"
+        ],
+        "computing": [
+          "COM_1"
+        ],
+        "french": [
+          "FRE_1"
+        ]
+      },
+      "course": {
+        "math": 3,
+        "english": 3,
+        "science": 3,
+        "history": 3,
+        "geography": 3,
+        "pe": 3,
+        "art": 3,
+        "music": 3,
+        "computing": 2,
+        "french": 2
+      }
+    },
+    "C04": {
+      "teachers": {
+        "math": [
+          "MAT_0"
+        ],
+        "english": [
+          "ENG_0"
+        ],
+        "science": [
+          "SCI_0"
+        ],
+        "history": [
+          "HIS_0"
+        ],
+        "geography": [
+          "GEO_0"
+        ],
+        "pe": [
+          "PE_0"
+        ],
+        "art": [
+          "ART_0"
+        ],
+        "music": [
+          "MUS_0"
+        ],
+        "computing": [
+          "COM_0"
+        ],
+        "french": [
+          "FRE_0"
+        ]
+      },
+      "course": {
+        "math": 3,
+        "english": 3,
+        "science": 3,
+        "history": 3,
+        "geography": 3,
+        "pe": 3,
+        "art": 3,
+        "music": 3,
+        "computing": 2,
+        "french": 2
+      }
+    },
+    "C05": {
+      "teachers": {
+        "math": [
+          "MAT_1"
+        ],
+        "english": [
+          "ENG_1"
+        ],
+        "science": [
+          "SCI_1"
+        ],
+        "history": [
+          "HIS_1"
+        ],
+        "geography": [
+          "GEO_1"
+        ],
+        "pe": [
+          "PE_1"
+        ],
+        "art": [
+          "ART_1"
+        ],
+        "music": [
+          "MUS_1"
+        ],
+        "computing": [
+          "COM_1"
+        ],
+        "french": [
+          "FRE_1"
+        ]
+      },
+      "course": {
+        "math": 3,
+        "english": 3,
+        "science": 3,
+        "history": 3,
+        "geography": 3,
+        "pe": 3,
+        "art": 3,
+        "music": 3,
+        "computing": 2,
+        "french": 2
+      }
+    },
+    "C06": {
+      "teachers": {
+        "math": [
+          "MAT_0"
+        ],
+        "english": [
+          "ENG_0"
+        ],
+        "science": [
+          "SCI_0"
+        ],
+        "history": [
+          "HIS_0"
+        ],
+        "geography": [
+          "GEO_0"
+        ],
+        "pe": [
+          "PE_0"
+        ],
+        "art": [
+          "ART_0"
+        ],
+        "music": [
+          "MUS_0"
+        ],
+        "computing": [
+          "COM_0"
+        ],
+        "french": [
+          "FRE_0"
+        ]
+      },
+      "course": {
+        "math": 3,
+        "english": 3,
+        "science": 3,
+        "history": 3,
+        "geography": 3,
+        "pe": 3,
+        "art": 3,
+        "music": 3,
+        "computing": 2,
+        "french": 2
+      }
+    },
+    "C07": {
+      "teachers": {
+        "math": [
+          "MAT_1"
+        ],
+        "english": [
+          "ENG_1"
+        ],
+        "science": [
+          "SCI_1"
+        ],
+        "history": [
+          "HIS_1"
+        ],
+        "geography": [
+          "GEO_1"
+        ],
+        "pe": [
+          "PE_1"
+        ],
+        "art": [
+          "ART_1"
+        ],
+        "music": [
+          "MUS_1"
+        ],
+        "computing": [
+          "COM_1"
+        ],
+        "french": [
+          "FRE_1"
+        ]
+      },
+      "course": {
+        "math": 3,
+        "english": 3,
+        "science": 3,
+        "history": 3,
+        "geography": 3,
+        "pe": 3,
+        "art": 3,
+        "music": 3,
+        "computing": 2,
+        "french": 2
+      }
+    },
+    "C08": {
+      "teachers": {
+        "math": [
+          "MAT_0"
+        ],
+        "english": [
+          "ENG_0"
+        ],
+        "science": [
+          "SCI_0"
+        ],
+        "history": [
+          "HIS_0"
+        ],
+        "geography": [
+          "GEO_0"
+        ],
+        "pe": [
+          "PE_0"
+        ],
+        "art": [
+          "ART_0"
+        ],
+        "music": [
+          "MUS_0"
+        ],
+        "computing": [
+          "COM_0"
+        ],
+        "french": [
+          "FRE_0"
+        ]
+      },
+      "course": {
+        "math": 3,
+        "english": 3,
+        "science": 3,
+        "history": 3,
+        "geography": 3,
+        "pe": 3,
+        "art": 3,
+        "music": 3,
+        "computing": 2,
+        "french": 2
+      }
+    },
+    "C09": {
+      "teachers": {
+        "math": [
+          "MAT_1"
+        ],
+        "english": [
+          "ENG_1"
+        ],
+        "science": [
+          "SCI_1"
+        ],
+        "history": [
+          "HIS_1"
+        ],
+        "geography": [
+          "GEO_1"
+        ],
+        "pe": [
+          "PE_1"
+        ],
+        "art": [
+          "ART_1"
+        ],
+        "music": [
+          "MUS_1"
+        ],
+        "computing": [
+          "COM_1"
+        ],
+        "french": [
+          "FRE_1"
+        ]
+      },
+      "course": {
+        "math": 3,
+        "english": 3,
+        "science": 3,
+        "history": 3,
+        "geography": 3,
+        "pe": 3,
+        "art": 3,
+        "music": 3,
+        "computing": 2,
+        "french": 2
+      }
+    }
+  }
+}
