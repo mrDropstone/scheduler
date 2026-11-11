@@ -7,28 +7,6 @@
     "Fri"
   ],
   "periods_per_day": 6,
-  "teachers": [
-    "MAT_0",
-    "MAT_1",
-    "ENG_0",
-    "ENG_1",
-    "SCI_0",
-    "SCI_1",
-    "HIS_0",
-    "HIS_1",
-    "GEO_0",
-    "GEO_1",
-    "PE_0",
-    "PE_1",
-    "ART_0",
-    "ART_1",
-    "MUS_0",
-    "MUS_1",
-    "COM_0",
-    "COM_1",
-    "FRE_0",
-    "FRE_1"
-  ],
   "subjects": [
     "math",
     "english",
@@ -41,8 +19,284 @@
     "computing",
     "french"
   ],
+  "difficulties": {
+    "math": 11,
+    "english": 2,
+    "science": 1,
+    "history": 12,
+    "geography": 5,
+    "pe": 4,
+    "art": 4,
+    "music": 3,
+    "computing": 12,
+    "french": 2
+  },
+  "teachers": {
+    "MAT_0": {
+      "unavailability": [
+        [],
+        [],
+        [
+          0,
+          5
+        ],
+        [
+          4
+        ],
+        []
+      ]
+    },
+    "MAT_1": {
+      "unavailability": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    "ENG_0": {
+      "unavailability": [
+        [
+          1
+        ],
+        [],
+        [],
+        [
+          0,
+          5
+        ],
+        []
+      ]
+    },
+    "ENG_1": {
+      "unavailability": [
+        [],
+        [],
+        [
+          5
+        ],
+        [],
+        [
+          0,
+          4
+        ]
+      ]
+    },
+    "SCI_0": {
+      "unavailability": [
+        [
+          1,
+          4
+        ],
+        [],
+        [
+          2
+        ],
+        [],
+        []
+      ]
+    },
+    "SCI_1": {
+      "unavailability": [
+        [],
+        [],
+        [],
+        [],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "HIS_0": {
+      "unavailability": [
+        [],
+        [],
+        [
+          4
+        ],
+        [],
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    "HIS_1": {
+      "unavailability": [
+        [
+          0,
+          1
+        ],
+        [],
+        [],
+        [],
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    "GEO_0": {
+      "unavailability": [
+        [],
+        [],
+        [],
+        [
+          5
+        ],
+        []
+      ]
+    },
+    "GEO_1": {
+      "unavailability": [
+        [
+          3,
+          4
+        ],
+        [],
+        [],
+        [
+          0,
+          5
+        ],
+        []
+      ]
+    },
+    "PE_0": {
+      "unavailability": [
+        [
+          5
+        ],
+        [],
+        [
+          3,
+          4
+        ],
+        [],
+        []
+      ]
+    },
+    "PE_1": {
+      "unavailability": [
+        [],
+        [
+          5
+        ],
+        [],
+        [],
+        []
+      ]
+    },
+    "ART_0": {
+      "unavailability": [
+        [],
+        [
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [],
+        [
+          4,
+          5
+        ]
+      ]
+    },
+    "ART_1": {
+      "unavailability": [
+        [],
+        [
+          4
+        ],
+        [],
+        [],
+        []
+      ]
+    },
+    "MUS_0": {
+      "unavailability": [
+        [],
+        [],
+        [
+          1,
+          2
+        ],
+        [
+          0
+        ],
+        []
+      ]
+    },
+    "MUS_1": {
+      "unavailability": [
+        [],
+        [],
+        [],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ]
+    },
+    "COM_0": {
+      "unavailability": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    "COM_1": {
+      "unavailability": [
+        [],
+        [],
+        [],
+        [
+          2
+        ],
+        [
+          4
+        ]
+      ]
+    },
+    "FRE_0": {
+      "unavailability": [
+        [
+          5
+        ],
+        [],
+        [
+          2
+        ],
+        [
+          2
+        ],
+        []
+      ]
+    },
+    "FRE_1": {
+      "unavailability": [
+        [
+          5
+        ],
+        [],
+        [],
+        [],
+        []
+      ]
+    }
+  },
   "classes": {
-    "C00": {
+    "6A": {
       "teachers": {
         "math": [
           "MAT_0"
@@ -88,7 +342,7 @@
         "french": 2
       }
     },
-    "C01": {
+    "6B": {
       "teachers": {
         "math": [
           "MAT_1"
@@ -134,7 +388,7 @@
         "french": 2
       }
     },
-    "C02": {
+    "6C": {
       "teachers": {
         "math": [
           "MAT_0"
@@ -180,7 +434,7 @@
         "french": 2
       }
     },
-    "C03": {
+    "6D": {
       "teachers": {
         "math": [
           "MAT_1"
@@ -226,7 +480,7 @@
         "french": 2
       }
     },
-    "C04": {
+    "6E": {
       "teachers": {
         "math": [
           "MAT_0"
@@ -272,7 +526,7 @@
         "french": 2
       }
     },
-    "C05": {
+    "6F": {
       "teachers": {
         "math": [
           "MAT_1"
@@ -318,7 +572,7 @@
         "french": 2
       }
     },
-    "C06": {
+    "7A": {
       "teachers": {
         "math": [
           "MAT_0"
@@ -364,7 +618,7 @@
         "french": 2
       }
     },
-    "C07": {
+    "7B": {
       "teachers": {
         "math": [
           "MAT_1"
@@ -410,7 +664,7 @@
         "french": 2
       }
     },
-    "C08": {
+    "7C": {
       "teachers": {
         "math": [
           "MAT_0"
@@ -456,7 +710,7 @@
         "french": 2
       }
     },
-    "C09": {
+    "7D": {
       "teachers": {
         "math": [
           "MAT_1"

@@ -117,89 +117,89 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named my_app
+# Target rules for targets named scheduler
 
 # Build rule for target.
-my_app: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_app
-.PHONY : my_app
+scheduler: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scheduler
+.PHONY : scheduler
 
 # fast build rule for target.
-my_app/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_app.dir/build.make CMakeFiles/my_app.dir/build
-.PHONY : my_app/fast
+scheduler/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/build
+.PHONY : scheduler/fast
 
-csv.o: csv.cpp.o
-.PHONY : csv.o
-
-# target to build an object file
-csv.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_app.dir/build.make CMakeFiles/my_app.dir/csv.cpp.o
-.PHONY : csv.cpp.o
-
-csv.i: csv.cpp.i
-.PHONY : csv.i
-
-# target to preprocess a source file
-csv.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_app.dir/build.make CMakeFiles/my_app.dir/csv.cpp.i
-.PHONY : csv.cpp.i
-
-csv.s: csv.cpp.s
-.PHONY : csv.s
-
-# target to generate assembly for a file
-csv.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_app.dir/build.make CMakeFiles/my_app.dir/csv.cpp.s
-.PHONY : csv.cpp.s
-
-main.o: main.cpp.o
-.PHONY : main.o
+src/csv.o: src/csv.cpp.o
+.PHONY : src/csv.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_app.dir/build.make CMakeFiles/my_app.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/csv.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/src/csv.cpp.o
+.PHONY : src/csv.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/csv.i: src/csv.cpp.i
+.PHONY : src/csv.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_app.dir/build.make CMakeFiles/my_app.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/csv.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/src/csv.cpp.i
+.PHONY : src/csv.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/csv.s: src/csv.cpp.s
+.PHONY : src/csv.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_app.dir/build.make CMakeFiles/my_app.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/csv.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/src/csv.cpp.s
+.PHONY : src/csv.cpp.s
 
-scheduler.o: scheduler.cpp.o
-.PHONY : scheduler.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-scheduler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_app.dir/build.make CMakeFiles/my_app.dir/scheduler.cpp.o
-.PHONY : scheduler.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-scheduler.i: scheduler.cpp.i
-.PHONY : scheduler.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-scheduler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_app.dir/build.make CMakeFiles/my_app.dir/scheduler.cpp.i
-.PHONY : scheduler.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-scheduler.s: scheduler.cpp.s
-.PHONY : scheduler.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-scheduler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_app.dir/build.make CMakeFiles/my_app.dir/scheduler.cpp.s
-.PHONY : scheduler.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/scheduler.o: src/scheduler.cpp.o
+.PHONY : src/scheduler.o
+
+# target to build an object file
+src/scheduler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/src/scheduler.cpp.o
+.PHONY : src/scheduler.cpp.o
+
+src/scheduler.i: src/scheduler.cpp.i
+.PHONY : src/scheduler.i
+
+# target to preprocess a source file
+src/scheduler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/src/scheduler.cpp.i
+.PHONY : src/scheduler.cpp.i
+
+src/scheduler.s: src/scheduler.cpp.s
+.PHONY : src/scheduler.s
+
+# target to generate assembly for a file
+src/scheduler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/src/scheduler.cpp.s
+.PHONY : src/scheduler.cpp.s
 
 # Help Target
 help:
@@ -209,16 +209,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... my_app"
-	@echo "... csv.o"
-	@echo "... csv.i"
-	@echo "... csv.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... scheduler.o"
-	@echo "... scheduler.i"
-	@echo "... scheduler.s"
+	@echo "... scheduler"
+	@echo "... src/csv.o"
+	@echo "... src/csv.i"
+	@echo "... src/csv.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/scheduler.o"
+	@echo "... src/scheduler.i"
+	@echo "... src/scheduler.s"
 .PHONY : help
 
 

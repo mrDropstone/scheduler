@@ -1,0 +1,32 @@
+{
+    "difficulties": {
+        "math" : 5,
+        "english" : 67
+    },
+    "teachers" : {
+        "Guobian" : {
+            "unavailability" : [
+                [], [], [], [], []
+            ]
+        },
+        "Steve" : {
+            "unavailability" : [
+                [], [], [], [], []
+            ]
+        }
+    },
+    "classes" : {
+        "6A" : {
+            "max_periods" : 6,
+            "days" : 5,
+            "teachers" : {
+                "math" : ["Guobian"],
+                "english" : ["Steve"]
+            },
+            "course" : {
+                "math" : 5,
+                "english" : 10
+            }
+        }
+    }
+}
