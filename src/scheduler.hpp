@@ -6,6 +6,7 @@
 #include "nlohmann/json_fwd.hpp"
 #include <string>
 #include <vector>
+#include <optional>
 #include "csv.hpp"
 
 using nlohmann::json;
@@ -27,6 +28,9 @@ struct Constraints {
         std::string name;
         std::map<SubjectId, std::vector<TeacherId>> teachers;
         std::map<SubjectId, int> course;
+        std::vector<std::vector<std::vector<SubjectId>>> undesired;
+        std::vector<std::vector<std::optional<SubjectId>>> preferred;
+        int max_daily_difficulty;
         int max_periods;
         int days;
 
@@ -39,6 +43,7 @@ struct Constraints {
 
 
     json to_json() const;
+    int get_subject_id(const std::string& name) const;
 };
 
 

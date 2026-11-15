@@ -1,0 +1,17 @@
+Constraints:
+Hard:
+unavailability              [yes]
+max lessons                 [user-defined]
+days                        [user-defined]
+no teacher double-booking   [yes]
+no class double-booking     [yes]
+teachers cooking in pairs   [yes]
+no gaps for students        [yes]
+first lesson                [yes]
+max daily difficulty        [yes]
+double periods              [no]
+lesson difficulty switching [no]
+
+Soft:
+undesired periods           [yes]
+prefered periods            [no]

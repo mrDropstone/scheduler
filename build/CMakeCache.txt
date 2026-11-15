@@ -213,6 +213,9 @@ Protobuf_DIR:PATH=/home/lohman/code/projects/cp_scheduler/external/or-tools/lib/
 //The directory containing a CMake configuration file for SCIP.
 SCIP_DIR:PATH=/home/lohman/code/projects/cp_scheduler/external/or-tools/lib/cmake/scip
 
+//The directory containing a CMake configuration file for Slint.
+Slint_DIR:PATH=Slint_DIR-NOTFOUND
+
 //Path to a file.
 ZLIB_INCLUDE_DIR:PATH=/home/lohman/code/projects/cp_scheduler/external/or-tools/include
 

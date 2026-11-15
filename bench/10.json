@@ -1,12 +1,4 @@
 {
-  "days": [
-    "Mon",
-    "Tue",
-    "Wed",
-    "Thu",
-    "Fri"
-  ],
-  "periods_per_day": 6,
   "subjects": [
     "math",
     "english",
@@ -340,7 +332,10 @@
         "music": 3,
         "computing": 2,
         "french": 2
-      }
+      },
+      "max_periods": 6,
+      "days": 5,
+      "max_daily_difficulty": 67
     },
     "6B": {
       "teachers": {
@@ -386,7 +381,10 @@
         "music": 3,
         "computing": 2,
         "french": 2
-      }
+      },
+      "max_periods": 6,
+      "days": 5,
+      "max_daily_difficulty": 67
     },
     "6C": {
       "teachers": {
@@ -432,7 +430,10 @@
         "music": 3,
         "computing": 2,
         "french": 2
-      }
+      },
+      "max_periods": 6,
+      "days": 5,
+      "max_daily_difficulty": 67
     },
     "6D": {
       "teachers": {
@@ -478,7 +479,10 @@
         "music": 3,
         "computing": 2,
         "french": 2
-      }
+      },
+      "max_periods": 6,
+      "days": 5,
+      "max_daily_difficulty": 67
     },
     "6E": {
       "teachers": {
@@ -524,7 +528,10 @@
         "music": 3,
         "computing": 2,
         "french": 2
-      }
+      },
+      "max_periods": 6,
+      "days": 5,
+      "max_daily_difficulty": 67
     },
     "6F": {
       "teachers": {
@@ -570,7 +577,10 @@
         "music": 3,
         "computing": 2,
         "french": 2
-      }
+      },
+      "max_periods": 6,
+      "days": 5,
+      "max_daily_difficulty": 67
     },
     "7A": {
       "teachers": {
@@ -616,7 +626,10 @@
         "music": 3,
         "computing": 2,
         "french": 2
-      }
+      },
+      "max_periods": 6,
+      "days": 5,
+      "max_daily_difficulty": 67
     },
     "7B": {
       "teachers": {
@@ -662,7 +675,10 @@
         "music": 3,
         "computing": 2,
         "french": 2
-      }
+      },
+      "max_periods": 6,
+      "days": 5,
+      "max_daily_difficulty": 67
     },
     "7C": {
       "teachers": {
@@ -708,7 +724,10 @@
         "music": 3,
         "computing": 2,
         "french": 2
-      }
+      },
+      "max_periods": 6,
+      "days": 5,
+      "max_daily_difficulty": 67
     },
     "7D": {
       "teachers": {
@@ -754,7 +773,10 @@
         "music": 3,
         "computing": 2,
         "french": 2
-      }
+      },
+      "max_periods": 6,
+      "days": 5,
+      "max_daily_difficulty": 67
     }
   }
 }
