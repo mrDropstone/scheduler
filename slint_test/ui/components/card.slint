@@ -1,0 +1,37 @@
+import { Theme } from "../theme.slint";
+import { VerticalBox } from "std-widgets.slint";
+
+export component Card inherits Rectangle {
+    background: Theme.current.surface;
+    border-radius: Theme.current.radius;
+    border-width: Theme.current.border_width;
+    border-color: Theme.current.border;
+    drop-shadow-blur: Theme.current.radius;
+    height: content.preferred-height;
+
+    content := VerticalLayout {
+        padding: Theme.current.padding-top;
+        alignment: start;
+        @children
+    }
+}
+
+export component CardWithName inherits Card {
+    in property <string> name;
+    in property <string> description;
+
+    VerticalBox {
+        x: 20px;
+        Text {
+            text: name;
+            font-size: 16pt;
+            font-weight: FontWeight.bold;
+            color: white;
+        }
+        Text {
+            text: description;
+            font-size: 12pt;
+            color: #9BA2B0;
+        }
+    }
+}

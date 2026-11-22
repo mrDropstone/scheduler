@@ -1,0 +1,20 @@
+import { Theme } from "../theme.slint";
+import { VerticalBox, LineEdit } from "std-widgets.slint";
+
+export component Input inherits Rectangle {
+    height: 30px;
+    background: #171922;
+    border-radius: 5px;
+    border-width: Theme.current.border_width;
+    border-color: #272A35;
+    in-out property <string> input;
+    in-out property <string> default_text;
+    
+    input := TextInput {
+        text: default_text;
+        x: 10px;
+        y: (parent.height - 0.7 * self.height) / 2;
+        font-size: 0.5 * parent.height;
+        color: white;
+    }
+}

@@ -1,0 +1,30 @@
+import { Subject, Constraints } from "pages/constraints.slint";
+import { Theme } from "theme.slint";
+import { VerticalBox } from "std-widgets.slint";
+
+
+export component MainWindow inherits Window {
+    title: "Scheduler";
+    preferred-width: 800px;
+    preferred-height: 800px;
+    background: Theme.current.background;
+
+    in-out property <int> page: 0;
+    
+    if page == 0 : 
+    HorizontalLayout {
+        Rectangle {
+            width: 200px;
+            height: 100%;
+            background: Theme.current.surface;
+
+            Rectangle {
+                x: parent.width - self.width;
+                height: parent.height;
+                width: Theme.current.border_width;
+                background: Theme.current.border;
+            }
+        }
+        Constraints {}
+    }
+}

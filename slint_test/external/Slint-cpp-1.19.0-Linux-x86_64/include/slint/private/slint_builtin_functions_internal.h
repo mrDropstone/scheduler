@@ -1,0 +1,86 @@
+#pragma once
+// This file is auto-generated from api/cpp/cbindgen.rs
+#include <cstdint>
+#include "private/slint_enums_internal.h"
+namespace slint { class Brush; class Color; class Keys; struct HsvaColor; struct OklchColor; template<typename T> struct RgbaColor; struct SharedString; struct StyledText; struct LogicalPosition; }
+namespace slint::cbindgen_private { struct FontMetrics; struct ItemRc; extern "C" {
+void slint_builtin_modulo(float *, const float *, const float *);
+void slint_builtin_round(int32_t *, const float *);
+void slint_builtin_ceil(int32_t *, const float *);
+void slint_builtin_floor(int32_t *, const float *);
+void slint_builtin_abs(float *, const float *);
+void slint_builtin_sqrt(float *, const float *);
+void slint_builtin_cos(float *, const float *);
+void slint_builtin_sin(float *, const float *);
+void slint_builtin_tan(float *, const float *);
+void slint_builtin_acos(float *, const float *);
+void slint_builtin_asin(float *, const float *);
+void slint_builtin_atan(float *, const float *);
+void slint_builtin_atan2(float *, const float *, const float *);
+void slint_builtin_log(float *, const float *, const float *);
+void slint_builtin_ln(float *, const float *);
+void slint_builtin_pow(float *, const float *, const float *);
+void slint_builtin_exp(float *, const float *);
+void slint_builtin_to_fixed(SharedString *, const double *, const int32_t *);
+void slint_builtin_to_precision(SharedString *, const double *, const int32_t *);
+void slint_builtin_to_string_unlocalized(SharedString *, const double *);
+void slint_builtin_scroll_to(void *, const ItemRc *, const LogicalPosition *, const ScrollBehavior *);
+void slint_builtin_ensure_visible(void *, const ItemRc *, const ScrollBehavior *);
+void slint_builtin_set_selection_offsets(void *, const ItemRc *, const int32_t *, const int32_t *);
+void slint_builtin_text_input_select_all(void *, const ItemRc *);
+void slint_builtin_text_input_clear_selection(void *, const ItemRc *);
+void slint_builtin_text_input_cut(void *, const ItemRc *);
+void slint_builtin_text_input_copy(void *, const ItemRc *);
+void slint_builtin_text_input_paste(void *, const ItemRc *);
+void slint_builtin_text_input_undo(void *, const ItemRc *);
+void slint_builtin_text_input_redo(void *, const ItemRc *);
+void slint_builtin_has_selection(bool *, const ItemRc *);
+void slint_builtin_styled_text_set_selection_offsets(void *, const ItemRc *, const int32_t *, const int32_t *);
+void slint_builtin_styled_text_select_all(void *, const ItemRc *);
+void slint_builtin_styled_text_clear_selection(void *, const ItemRc *);
+void slint_builtin_styled_text_copy(void *, const ItemRc *);
+void slint_builtin_styled_text_has_selection(bool *, const ItemRc *);
+void slint_builtin_item_font_metrics(FontMetrics *, const ItemRc *);
+void slint_builtin_string_to_float(float *, const SharedString *);
+void slint_builtin_string_is_float(bool *, const SharedString *);
+void slint_builtin_string_is_empty(bool *, const SharedString *);
+void slint_builtin_string_character_count(int32_t *, const SharedString *);
+void slint_builtin_string_to_lowercase(SharedString *, const SharedString *);
+void slint_builtin_string_to_uppercase(SharedString *, const SharedString *);
+void slint_builtin_string_starts_with(bool *, const SharedString *, const SharedString *);
+void slint_builtin_string_ends_with(bool *, const SharedString *, const SharedString *);
+void slint_builtin_string_replace_all(SharedString *, const SharedString *, const SharedString *, const SharedString *);
+void slint_builtin_keys_to_string(SharedString *, const Keys *);
+void slint_builtin_color_rgba(RgbaColor<uint8_t> *, const Color *);
+void slint_builtin_color_hsva(HsvaColor *, const Color *);
+void slint_builtin_color_oklch(OklchColor *, const Color *);
+void slint_builtin_color_brighter(Brush *, const Brush *, const float *);
+void slint_builtin_color_darker(Brush *, const Brush *, const float *);
+void slint_builtin_color_transparentize(Brush *, const Brush *, const float *);
+void slint_builtin_color_mix(Color *, const Color *, const Color *, const float *);
+void slint_builtin_color_with_alpha(Brush *, const Brush *, const float *);
+void slint_builtin_rgb(Color *, const int32_t *, const int32_t *, const int32_t *, const float *);
+void slint_builtin_hsv(Color *, const float *, const float *, const float *, const float *);
+void slint_builtin_oklch(Color *, const float *, const float *, const float *, const float *);
+void slint_builtin_accent_color(Color *);
+void slint_builtin_reduced_motion(bool *);
+void slint_builtin_use_24_hour_format(bool *);
+void slint_builtin_month_day_count(int32_t *, const int32_t *, const int32_t *);
+void slint_builtin_month_offset(int32_t *, const int32_t *, const int32_t *);
+void slint_builtin_format_date(SharedString *, const SharedString *, const int32_t *, const int32_t *, const int32_t *);
+void slint_builtin_valid_date(bool *, const SharedString *, const SharedString *);
+void slint_builtin_swipe_gesture_handler_cancel(void *, const ItemRc *);
+void slint_builtin_context_menu_close(void *, const ItemRc *);
+void slint_builtin_context_menu_is_open(bool *, const ItemRc *);
+void slint_builtin_window_close(bool *, const ItemRc *);
+void slint_builtin_window_hide(void *, const ItemRc *);
+void slint_builtin_item_absolute_position(LogicalPosition *, const ItemRc *);
+void slint_builtin_detect_operating_system(OperatingSystemType *);
+void slint_builtin_open_url(bool *, const SharedString *);
+void slint_builtin_string_to_styled_text(StyledText *, const SharedString *);
+void slint_builtin_color_to_styled_text(StyledText *, const Color *);
+void slint_builtin_decimal_separator(SharedString *);
+void slint_builtin_default_window_title(SharedString *);
+void slint_builtin_path_point_at(LogicalPosition *, const ItemRc *, const float *);
+void slint_builtin_path_angle_at(float *, const ItemRc *, const float *);
+} }

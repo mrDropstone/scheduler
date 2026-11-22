@@ -1,0 +1,97 @@
+import { VerticalBox, ListView, Button, TextEdit } from "std-widgets.slint";
+import { HorizontalBorder, VerticalBorder, Input, Card, CardWithName, Title } from "../components/index.slint";
+import { Theme } from "../theme.slint";
+export { Theme }
+
+
+export component SubjectConfig inherits Rectangle {
+    in-out property <string> name;
+    in-out property <string> difficulty;
+
+    HorizontalLayout {
+        alignment: space-between;
+
+        name := Input {
+            width: 50%;
+        }
+        difficulty := Input {
+            width: 20%;
+        }
+    }
+}
+
+export global Logic {
+    callback add-subject-clicked;
+}
+
+export struct Subject {
+    name: string,
+    difficulty: int,
+}
+export component Constraints inherits VerticalBox {
+    preferred-width: 800px;
+    preferred-height: 800px;
+
+    in-out property <[Subject]> subjects: [
+        { name: "math", difficulty: 12 },
+        //{ name: "chemistry", difficulty: 5 },
+    ];
+
+    VerticalBox {
+        padding-right: 0px;
+
+        Title {
+            title-text: "Constraints";
+        }
+        Flickable {
+            width: 100%;
+            height: 100%;
+            content-height: 20000px;
+
+            VerticalBox {
+                width: 100%;
+                spacing: Theme.current.spacing-sm; 
+                padding-top: 15px;
+
+                CardWithName {
+                    name: "Subjects";
+                    description: "subject names and difficulties";
+                    width: (parent.width - 40px);
+                    x: (parent.width - self.width) / 2;
+
+                    HorizontalBorder {
+                        x: 0px;
+                        width: parent.width;
+                    }
+                    layout := VerticalLayout {
+                        x: 20px;
+                        spacing: Theme.current.spacing_sm;
+                        padding-top: 20px;
+
+                        for subject in root.subjects: Text {
+                            SubjectConfig {
+                                //default_text: subject.name;
+                                //width: 50%;
+                                x: 0px;
+                            }
+                        }
+                        Button {
+                            x: 0px;
+                            width: 100px;
+                            text: "add subject";
+                            clicked => {
+                                Logic.add-subject-clicked();
+                            }
+                        }
+                    }
+                }
+                CardWithName {
+                    name: "Teachers";
+                    description: "teacher names and availability";
+                    width: (parent.width - 40px);
+                    x: (parent.width - self.width) / 2;
+                }
+            }
+        }
+    }
+}

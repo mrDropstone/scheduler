@@ -1,0 +1,27 @@
+import { HorizontalBorder } from "single-border.slint";
+import { Theme } from "../theme.slint";
+
+export component Title inherits Rectangle {
+    x: 0px;
+    width: 100%;
+    height: 80px;
+    background: Theme.current.background;
+
+    in property <string> title-text;
+
+    Text {
+        x: 20px;
+        font-size: 20pt;
+        text: root.title-text;
+        color: white;
+        font-weight: FontWeight.bold;
+    }
+
+    HorizontalBorder {
+        x: 0px;
+        width: parent.width;
+        y: parent.height - self.height;
+    }
+}
+
+
