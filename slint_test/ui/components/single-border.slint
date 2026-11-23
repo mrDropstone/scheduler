@@ -1,11 +1,14 @@
+import { Theme } from "../theme.slint";
+import { Style } from "../style.slint";
+
 export component VerticalBorder inherits Rectangle {
     height: 100%;
-    width: 1px;
-    background: #272A35;
+    width: Style.current.border;
+    background: Theme.current.border;
 }
 
 export component HorizontalBorder inherits Rectangle {
-    height: 1px;
+    height: Style.current.border;
     width: 100%;
-    background: #272A35;
+    background: Theme.current.border;
 }

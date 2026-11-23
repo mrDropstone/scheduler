@@ -1,0 +1,12 @@
+export enum AppAction {
+    Constraints,
+    Timetable,
+    AddSubject,
+    RemoveSubject,
+    SaveTimetable,
+    LoadTimetable,
+}
+
+export global AppActions {
+    callback trigger(AppAction);
+}

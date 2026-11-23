@@ -1,0 +1,21 @@
+export struct StyleTokens {
+    border: length,
+    radius: length,
+    spacing-sm: length,
+    padding-top: length,
+    text: length,
+    muted: length,
+}
+
+export global Style {
+    out property <StyleTokens> basic: {
+        border: 1px,
+        radius : 10px,
+        spacing-sm : 20px,
+        padding-top: 10px,
+        text: 15pt,
+        muted: 15pt,
+    };
+
+    in-out property <StyleTokens> current: basic;
+}

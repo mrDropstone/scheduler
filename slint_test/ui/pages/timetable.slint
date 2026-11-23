@@ -1,0 +1,37 @@
+import { VerticalBox, ListView, Button } from "std-widgets.slint";
+import { HorizontalBorder, VerticalBorder, Input, Card, CardWithName, Title } from "../components/index.slint";
+import { Theme } from "../theme.slint";
+import { Style } from "../style.slint";
+
+export component Timetable inherits VerticalBox {
+    VerticalBox {
+        height: 100%;
+        width: 100%;
+        padding-right: 0px;
+
+        Title {
+            title-text: "Timetable";
+        }
+        Flickable {
+            height: 100%;
+            width: 100%;
+            content-height: 2000px;
+
+            VerticalBox {
+                width: 100%;
+                spacing: Style.current.spacing-sm; 
+                padding-top: Style.current.padding-top;
+
+                CardWithName {
+                    width: (parent.width - 40px);
+                    x: (parent.width - self.width) / 2;
+
+                    HorizontalBorder {
+                        x: 0px;
+                        width: parent.width;
+                    }
+                }
+            }
+        }
+    }
+}

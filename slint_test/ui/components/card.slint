@@ -1,16 +1,18 @@
 import { Theme } from "../theme.slint";
+import { Style } from "../style.slint";
 import { VerticalBox } from "std-widgets.slint";
 
 export component Card inherits Rectangle {
     background: Theme.current.surface;
-    border-radius: Theme.current.radius;
-    border-width: Theme.current.border_width;
+
+    border-radius: Style.current.radius;
+    border-width: Style.current.border;
     border-color: Theme.current.border;
-    drop-shadow-blur: Theme.current.radius;
     height: content.preferred-height;
 
     content := VerticalLayout {
-        padding: Theme.current.padding-top;
+        padding: Style.current.padding-top;
+        spacing: Style.current.spacing-sm;
         alignment: start;
         @children
     }
@@ -21,16 +23,18 @@ export component CardWithName inherits Card {
     in property <string> description;
 
     VerticalBox {
+        padding: Style.current.padding-top;
+        spacing: 8px;
         x: 20px;
         Text {
             text: name;
-            font-size: 16pt;
+            font-size: Style.current.text;
             font-weight: FontWeight.bold;
             color: white;
         }
         Text {
             text: description;
-            font-size: 12pt;
+            font-size: Style.current.muted;
             color: #9BA2B0;
         }
     }

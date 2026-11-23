@@ -3,22 +3,26 @@ export struct ThemeTokens {
     surface: color,
     text: color,
     border: color,
-    border-width: length,
-    radius: length,
-    spacing-sm: length,
-    padding-top: length,
+    muted: color,
+    accent: color,
+    accent-hover: color,
+    accent-soft: color,
+    green: color,
+    red: color,
 }
 
 export global Theme {
     out property <ThemeTokens> dark: {
         background: #0e1015,
         surface: #171922,
+        text: #14161a,
         border: #272a35,
-        border-width: 1px,
-        text: white,
-        radius : 10px,
-        spacing-sm : 20px,
-        padding-top: 15px,
+        muted: #6b7280,
+        accent: #171922,
+        accent-hover: #232842,
+        accent-soft: #eef0ff,
+        green: #0f9d58,
+        red: #dc2626,
     };
 
     in-out property <ThemeTokens> current: dark;

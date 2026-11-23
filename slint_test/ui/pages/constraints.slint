@@ -1,7 +1,7 @@
-import { VerticalBox, ListView, Button, TextEdit } from "std-widgets.slint";
-import { HorizontalBorder, VerticalBorder, Input, Card, CardWithName, Title } from "../components/index.slint";
+import { VerticalBox, ListView, Button } from "std-widgets.slint";
+import { HorizontalBorder, VerticalBorder, Input, Card, CardWithName, Title, CustomButton } from "../components/index.slint";
 import { Theme } from "../theme.slint";
-export { Theme }
+import { Style } from "../style.slint";
 
 
 export component SubjectConfig inherits Rectangle {
@@ -9,49 +9,46 @@ export component SubjectConfig inherits Rectangle {
     in-out property <string> difficulty;
 
     HorizontalLayout {
-        alignment: space-between;
+        spacing: 20px;
 
         name := Input {
-            width: 50%;
+            width: 300px;
         }
         difficulty := Input {
-            width: 20%;
+            input-type: number;
+            width: 100px;
         }
     }
 }
 
-export global Logic {
-    callback add-subject-clicked;
-}
-
 export struct Subject {
     name: string,
-    difficulty: int,
+    difficulty: string,
 }
-export component Constraints inherits VerticalBox {
-    preferred-width: 800px;
-    preferred-height: 800px;
 
+export component Constraints inherits VerticalBox {
     in-out property <[Subject]> subjects: [
-        { name: "math", difficulty: 12 },
+        { name: "math", difficulty: "12" },
         //{ name: "chemistry", difficulty: 5 },
     ];
 
     VerticalBox {
+        height: 100%;
+        width: 100%;
         padding-right: 0px;
 
         Title {
             title-text: "Constraints";
         }
         Flickable {
-            width: 100%;
             height: 100%;
-            content-height: 20000px;
+            width: 100%;
+            content-height: 2000px;
 
             VerticalBox {
                 width: 100%;
-                spacing: Theme.current.spacing-sm; 
-                padding-top: 15px;
+                spacing: Style.current.spacing-sm; 
+                padding-top: Style.current.padding-top;
 
                 CardWithName {
                     name: "Subjects";
@@ -65,29 +62,30 @@ export component Constraints inherits VerticalBox {
                     }
                     layout := VerticalLayout {
                         x: 20px;
-                        spacing: Theme.current.spacing_sm;
+                        spacing: Style.current.spacing-sm;
                         padding-top: 20px;
 
                         for subject in root.subjects: Text {
                             SubjectConfig {
-                                //default_text: subject.name;
-                                //width: 50%;
                                 x: 0px;
                             }
                         }
-                        Button {
+                        CustomButton {
                             x: 0px;
-                            width: 100px;
+                            width: 150px;
                             text: "add subject";
-                            clicked => {
-                                Logic.add-subject-clicked();
-                            }
                         }
                     }
                 }
                 CardWithName {
                     name: "Teachers";
                     description: "teacher names and availability";
+                    width: (parent.width - 40px);
+                    x: (parent.width - self.width) / 2;
+                }
+                CardWithName {
+                    name: "Classes";
+                    description: "class names, course, daily limits";
                     width: (parent.width - 40px);
                     x: (parent.width - self.width) / 2;
                 }

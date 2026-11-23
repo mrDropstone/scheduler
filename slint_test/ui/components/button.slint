@@ -1,0 +1,41 @@
+import { Theme } from "../theme.slint";
+import { Style } from "../style.slint";
+
+export component CustomButton inherits Rectangle {
+    in property <string> text;
+    in property <color> bg-color: Theme.current.accent;
+    in property <color> hover-color: Theme.current.accent-hover;
+    in property <color> active-color: Theme.current.accent-hover;
+    in property <color> text-color: white;
+    in property <length> font-size: Style.current.text;
+    border-radius: 5px;
+
+    in property <bool> enabled: true;
+
+    callback clicked();
+
+    background: !root.enabled ? #9ca3af :
+            touch.pressed ? root.active-color :
+            touch.has-hover ? root.hover-color : root.bg-color;
+
+    animate background {
+        duration: 120ms;
+        easing: ease-out;
+    }
+
+    touch := TouchArea {
+        enabled: root.enabled;
+        clicked => {
+            root.clicked();
+        }
+    }
+    
+    Text {
+        text: root.text;
+        color: text-color;
+        font-size: Style.current.text;
+    }
+
+    height: 40px;
+    min-width: 100px;
+}
