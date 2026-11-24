@@ -1,7 +1,10 @@
-import { VerticalBox, ListView, Button } from "std-widgets.slint";
-import { HorizontalBorder, VerticalBorder, Input, Card, CardWithName, Title, CustomButton } from "../components/index.slint";
+import { Subject, Teacher } from "../types.slint";
+import { AppActions, AppAction } from "../globals.slint";
+import { VerticalBox, ListView, Button, ComboBox } from "std-widgets.slint";
+import { HorizontalBorder, VerticalBorder, CustomEdit, Card, CardWithName, Title, CustomButton } from "../components/index.slint";
 import { Theme } from "../theme.slint";
 import { Style } from "../style.slint";
+import { AppData } from "../state.slint";
 
 
 export component SubjectConfig inherits Rectangle {
@@ -11,84 +14,111 @@ export component SubjectConfig inherits Rectangle {
     HorizontalLayout {
         spacing: 20px;
 
-        name := Input {
+        CustomEdit {
+            input <=> root.name;
             width: 300px;
         }
-        difficulty := Input {
+        CustomEdit {
+            input <=> root.difficulty;
             input-type: number;
             width: 100px;
         }
     }
 }
 
-export struct Subject {
-    name: string,
-    difficulty: string,
-}
-
 export component Constraints inherits VerticalBox {
-    in-out property <[Subject]> subjects: [
-        { name: "math", difficulty: "12" },
-        //{ name: "chemistry", difficulty: 5 },
-    ];
+    height: 100%;
+    width: 100%;
+    padding-right: 0px;
 
-    VerticalBox {
+    Title {
+        title-text: "Constraints";
+    }
+    Flickable {
         height: 100%;
         width: 100%;
-        padding-right: 0px;
+        content-height: 2000px;
 
-        Title {
-            title-text: "Constraints";
-        }
-        Flickable {
-            height: 100%;
+        VerticalBox {
             width: 100%;
-            content-height: 2000px;
+            spacing: Style.current.spacing-sm; 
+            padding-top: Style.current.padding-top;
 
-            VerticalBox {
-                width: 100%;
-                spacing: Style.current.spacing-sm; 
-                padding-top: Style.current.padding-top;
+            CardWithName {
+                name: "Subjects";
+                description: "subject names and difficulties";
+                width: (parent.width - 40px);
+                x: (parent.width - self.width) / 2;
 
-                CardWithName {
-                    name: "Subjects";
-                    description: "subject names and difficulties";
-                    width: (parent.width - 40px);
-                    x: (parent.width - self.width) / 2;
+                HorizontalBorder {
+                    x: 0px;
+                    width: parent.width;
+                }
+                VerticalLayout {
+                    x: 20px;
+                    spacing: Style.current.spacing-sm;
+                    padding-top: 20px;
 
-                    HorizontalBorder {
-                        x: 0px;
-                        width: parent.width;
+                    for subject in AppData.subjects: Text {
+                        SubjectConfig {
+                            name <=> subject.name;
+                            difficulty <=> subject.difficulty;
+                            x: 0px;
+                        }
                     }
-                    layout := VerticalLayout {
-                        x: 20px;
-                        spacing: Style.current.spacing-sm;
-                        padding-top: 20px;
+                    CustomButton {
+                        x: 0px;
+                        width: 150px;
+                        text: "add subject";
+                        clicked => {
+                            AppActions.trigger(AppAction.AddSubject);
+                        }
+                    }
+                }
+            }
+            CardWithName {
+                name: "Teachers";
+                description: "teacher names and availability";
+                width: (parent.width - 40px);
+                x: (parent.width - self.width) / 2;
 
-                        for subject in root.subjects: Text {
-                            SubjectConfig {
-                                x: 0px;
+                HorizontalBorder {
+                    x: 0px;
+                    width: parent.width;
+                }
+                VerticalLayout {
+                    x: 20px;
+                    spacing: Style.current.spacing-sm;
+                    padding-top: 20px;
+                    
+                    FlexboxLayout {
+                        spacing: 8px;
+                        cross-axis-line-alignment: start;
+
+                        for teacher in AppData.teachers : Card {
+                            width: 200px;
+                            Text {
+                                text: teacher.name;
+                                color: Theme.current.text;
                             }
                         }
-                        CustomButton {
-                            x: 0px;
-                            width: 150px;
-                            text: "add subject";
+                    }
+
+                    CustomButton {
+                        x: 0px;
+                        width: 150px;
+                        text: "add teacher";
+                        clicked => {
+                            AppActions.trigger(AppAction.AddTeacher);
                         }
                     }
                 }
-                CardWithName {
-                    name: "Teachers";
-                    description: "teacher names and availability";
-                    width: (parent.width - 40px);
-                    x: (parent.width - self.width) / 2;
-                }
-                CardWithName {
-                    name: "Classes";
-                    description: "class names, course, daily limits";
-                    width: (parent.width - 40px);
-                    x: (parent.width - self.width) / 2;
-                }
+            }
+            CardWithName {
+                name: "Classes";
+                description: "class names, course, daily limits";
+                width: (parent.width - 40px);
+                x: (parent.width - self.width) / 2;
             }
         }
     }

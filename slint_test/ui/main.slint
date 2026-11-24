@@ -1,4 +1,4 @@
-import { Subject, Constraints } from "pages/constraints.slint";
+import { Constraints } from "pages/constraints.slint";
 import { Timetable } from "pages/timetable.slint";
 import { CustomButton } from "components/index.slint";
 import { Theme } from "theme.slint";
@@ -6,6 +6,7 @@ import { Style } from "style.slint";
 import { VerticalBox, Button } from "std-widgets.slint";
 import { AppAction, AppActions } from "globals.slint";
 export { AppAction, AppActions } from "globals.slint";
+export { AppData } from "state.slint";
 
 
 
@@ -51,7 +52,6 @@ export component MainWindow inherits Window {
                 }
             }
         }
-
         Rectangle {
             Constraints {
                 visible: page == 0;

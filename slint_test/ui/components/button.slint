@@ -9,13 +9,14 @@ export component CustomButton inherits Rectangle {
     in property <color> text-color: white;
     in property <length> font-size: Style.current.text;
     border-radius: 5px;
+    border-color: Theme.current.border;
+    border-width: Style.current.border;
 
     in property <bool> enabled: true;
 
     callback clicked();
 
-    background: !root.enabled ? #9ca3af :
-            touch.pressed ? root.active-color :
+    background: touch.pressed ? root.active-color :
             touch.has-hover ? root.hover-color : root.bg-color;
 
     animate background {
@@ -37,5 +38,4 @@ export component CustomButton inherits Rectangle {
     }
 
     height: 40px;
-    min-width: 100px;
 }

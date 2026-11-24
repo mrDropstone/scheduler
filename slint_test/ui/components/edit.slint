@@ -2,20 +2,18 @@ import { Theme } from "../theme.slint";
 import { Style } from "../style.slint";
 import { VerticalBox } from "std-widgets.slint";
 
-export component Input inherits Rectangle {
+export component CustomEdit inherits Rectangle {
     height: 30px;
     background: Theme.current.surface;
     border-radius: 5px;
     border-width: Style.current.border;
     border-color: Theme.current.border;
     in property <InputType> input-type: text;
-
     in-out property <string> input;
-    in-out property <string> default_text;
     
-    input := TextInput {
+    TextInput {
+        text <=> input;
         input-type: root.input-type;
-        text: default_text;
         x: 10px;
         y: (parent.height - 0.7 * self.height) / 2;
         font-size: 0.5 * parent.height;
